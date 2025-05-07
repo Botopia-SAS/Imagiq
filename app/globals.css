@@ -1,26 +1,26 @@
-@import "tailwindcss";
+/* globals.css */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* aquí van tus resets o overrides propios */
+html, body {
+  margin: 0;
+  padding: 0;
+  /* el bg-black y text-white ya vienen del body en RootLayout, 
+     pero si quieres más controles globales: */
+  background-color: #000;
+  color: #fff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* puedes añadir media queries, keyframes, clases propias, etc. */
+@layer base {
+  /* Ejemplo: reducir el interlineado en párrafos */
+  p {
+    line-height: 1.6;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Ejemplo: un botón rounded extra grande */
+  .btn-xl {
+    @apply px-6 py-3 rounded-2xl font-semibold;
+  }
 }
