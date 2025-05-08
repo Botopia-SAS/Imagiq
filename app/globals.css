@@ -24,3 +24,7 @@ html, body {
     @apply px-6 py-3 rounded-2xl font-semibold;
   }
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}

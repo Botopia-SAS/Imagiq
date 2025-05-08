@@ -37,25 +37,21 @@ export default function Offers() {
   const offers = sampleOffers;
 
   return (
-    <section
-      className="
-        bg-gradient-to-b 
-        from-black 
-        to-gray-100 
-        text-black
-      "
-    >
+    <section className="bg-gradient-to-b from-black to-gray-100 text-black">
       <div className="px-6 md:px-12 lg:px-24 py-16">
         <h2 className="text-3xl font-bold mb-6 text-center text-white">
           Últimas ofertas
         </h2>
 
-        <div className="flex justify-center space-x-8 mb-12">
+        {/* Scrollable tabs en móvil con scrollbar siempre visible + hint de gradiente */}
+        <div className="relative overflow-x-scroll whitespace-nowrap mb-12 px-4 pb-3 scrollbar scrollbar-thumb-white scrollbar-track-white/30 scrollbar-thin md:overflow-visible md:px-0 md:flex md:justify-center md:space-x-8">
+          {/* hint visual de que hay más contenido */}
+          <div className="absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-black to-transparent pointer-events-none md:hidden" />
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`pb-2 ${
+              className={`inline-block pb-2 mr-8 last:mr-0 md:mr-0 ${
                 activeTab === tab
                   ? "border-b-2 border-white text-white font-medium"
                   : "text-white/70 hover:text-white"
