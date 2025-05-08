@@ -32,7 +32,7 @@ export default function ARScene() {
 
         const model = gltf.scene;
         model.position.set(0, 0, -0.5); // Frente a la cámara
-        model.scale.set(0.01, 0.01, 0.01); // Escala ajustable
+        model.scale.set(0.001, 0.001, 0.001); // Escala ajustable
         scene.add(model);
       });
 
