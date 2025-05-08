@@ -1,23 +1,22 @@
-// components/ARViewer.tsx
 // @ts-nocheck
 'use client';
-import React from 'react';
 import Script from 'next/script';
 
 export default function ARViewer() {
   return (
     <>
-      {/* Carga ESM como módulo para que no falle el ‘export’ */}
       <Script
         src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
         type="module"
         strategy="afterInteractive"
       />
 
-      {/* Ahora TS deja de quejarse */}
+      {/* Reduce el tamaño del televisor al 20% */}
+      {/* @ts-ignore */}
       <model-viewer
         src="/models/tv.glb"
-        alt="Modelo de TV"
+        ios-src="/models/tv.usdz"
+        alt="TV"
         ar
         ar-modes="scene-viewer webxr quick-look"
         environment-image="neutral"
