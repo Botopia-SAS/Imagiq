@@ -2,8 +2,8 @@
 import Script from "next/script";
 
 export const metadata = {
-  title: "Mi sitio",
-  description: "Descripción de tu sitio",
+  title: "ImagiQ",
+  description: "Proveedor oficial de Samsung en Colombia",
 };
 
 export default function RootLayout({
@@ -14,9 +14,15 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Carga Tailwind desde CDN antes de render */}
+        {/* Tailwind CSS a través de CDN */}
         <Script
           src="https://cdn.tailwindcss.com"
+          strategy="beforeInteractive"
+        />
+
+        {/* model-viewer para AR/VR (WebXR) */}
+        <Script
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
           strategy="beforeInteractive"
         />
       </head>
