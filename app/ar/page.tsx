@@ -31,8 +31,8 @@ export default function ARScene() {
       loader.load('/models/tv.glb', (gltf) => {
 
         const model = gltf.scene;
-        model.position.set(0, 1, 0); // Frente a la cámara
-        model.scale.set(0.005, 0.005, 0.005); // Escala ajustable
+        model.position.set(1, -0.5, 0); // Frente a la cámara
+        model.scale.set(0.009, 0.009, 0.009); // Escala ajustable
         scene.add(model);
       });
 
