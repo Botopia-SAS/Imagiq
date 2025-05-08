@@ -12,7 +12,6 @@ export default function ARViewer() {
       />
 
       {/* Reduce el tamaño del televisor al 20% */}
-      {/* @ts-ignore */}
       <model-viewer
         src="/models/tv.glb"
         ios-src="/models/tv.usdz"
